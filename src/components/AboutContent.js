@@ -1,7 +1,6 @@
 import './AboutContentStyles.css';
 
 import React from 'react';
-import {Link} from 'react-router-dom';
 import about1 from '../assets/about1.JPG';
 import about2 from '../assets/about2.JPG';
 
@@ -10,9 +9,9 @@ const AboutContent = () => {
     <div className='left'>
         <h1>About who I am?</h1>
         <p>I'm a FullStack developer who just graduated from a bootcamp at UT Austin! I'm looking to make responsive amazing websites for clients!</p>
-        <Link to='/contact'>
+        {/* <a href='/contact'>
             <button className='btn'>contact</button>
-        </Link>
+        </a> */}
     </div>
 
     <div className='right'>

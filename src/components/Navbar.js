@@ -1,11 +1,10 @@
 import "./NavbarStyles.css";
 
 import React, {useState} from 'react'
-import { Link } from "react-router-dom";
 
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = () => {
+function Navbar  ({currentPage, setCurrentPage}) {
 
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
@@ -23,21 +22,21 @@ const Navbar = () => {
 
   return (
     <div className={color ? "header header-bg" : "header"}>
-        <Link to ='/'>
+        {/* <Link to ='/'>
             <h1>Portfolio</h1>
-        </Link>
+        </Link> */}
         <ul className={click ?"nav-menu active" : "nav-menu"}>
             <li>
-                <Link to="/home">Home</Link>
+                <a href="#Home" onClick={()=>setCurrentPage("Home")}>Home</a>
             </li>
             <li>
-                <Link to="/projects">Projects</Link>
+            <a href="#Project" onClick={()=>setCurrentPage("Project")}>Project</a>
             </li>
             <li>
-                <Link to="/about">About</Link>
+            <a href="#About" onClick={()=>setCurrentPage("About")}>About</a>
             </li>
             <li>
-                <Link to="/contact">Contact</Link>
+            <a href="#Contact" onClick={()=>setCurrentPage("Contact")}>Contact</a>
             </li>
         </ul>
         <div className="hamburger" onClick={handleClick}>
